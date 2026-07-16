@@ -17,7 +17,7 @@ function HomepageHeader() {
         width: '100%',
         padding: '6rem 0', 
         position: 'relative',
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/img/banner-bg.webp')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img/banner-bg.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center 40%',
         backgroundRepeat: 'no-repeat',
@@ -34,7 +34,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/Introduction"
+            to="docs/Introduction"
             style={{ 
               fontSize: '1.1rem', 
               padding: '0.75rem 2rem',
@@ -126,7 +126,7 @@ export default function Home() {
           <div className="container" style={{ maxWidth: '900px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
             <div style={{ flexShrink: 0 }}>
               <img 
-                src="/img/headshot.webp" 
+                src="img/headshot.webp"
                 alt="Jay Pitkänen" 
                 style={{ width: '350px', height: '350px', borderRadius: '50%', objectFit: 'cover' }} 
               />
@@ -134,7 +134,7 @@ export default function Home() {
             <div style={{ textAlign: 'center' }}>
               <p style={{ margin: '0 0 1rem 0', color: '#4b5563' }}>Need help with AI implementation?</p>
               <a href="https://www.linkedin.com/in/jaypitkanen/" style={{ fontSize: '1.1rem', fontWeight: '600', color: '#3B82F6', textDecoration: 'none' }}>
-<img src="/img/LI-In-Bug.png" alt="LinkedIn" style={{ width: '24px', height: '24px' }} />
+<img src="img/LI-In-Bug.png" alt="LinkedIn" style={{ width: '24px', height: '24px' }} />
               Connect With Me on LinkedIn &rarr;
               </a>
             </div>
@@ -168,7 +168,7 @@ export default function Home() {
           <div className={styles.buttons}>
           <Link
           className="button button--secondary button--lg"
-          to="/docs/Introduction"
+          to="docs/Introduction"
           style={{
             fontSize: '1.1rem',
           padding: '0.75rem 2rem',
@@ -218,7 +218,7 @@ export default function Home() {
          <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/Introduction"
+            to="docs/Introduction"
             style={{ 
               fontSize: '1.1rem', 
               padding: '0.75rem 2rem',

@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'The Goal',
-    imgSrc: '/img/hunting-ai.jpeg',
+    imgSrc: 'img/hunting-ai.jpeg',
     description: (
       <>
         No AI hype. Just ROI. I don't build tech for the sake of tech. I find the exact friction points in your business and deploy AI to erase them.
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'The Method',
-    imgSrc: '/img/prototype.jpeg',
+    imgSrc: 'img/prototype.jpeg',
     description: (
       <>
         I design for reality. I build lightweight, rapid prototypes to prove a concept works before asking a company to spend a single dollar on scaling it.
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'The Grind',
-    imgSrc: '/img/sisyphus.jpeg',
+    imgSrc: 'img/sisyphus.jpeg',
     description: (
       <>
         I don't just talk strategy. I bring receipts. Check out the <a href="/docs/Introduction">Case Studies</a> to see exactly how my AI solutions fit into real-world operational constraints.

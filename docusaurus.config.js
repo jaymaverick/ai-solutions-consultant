@@ -13,7 +13,7 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Jay Pitkänen',
-  tagline: 'AI Solutions Consultant Test',
+  tagline: 'AI Solutions Consultant',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -64,8 +64,8 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -109,7 +109,7 @@ const config = {
             position: 'left',
             label: 'Case Studies',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: 'blog', label: 'Blog', position: 'left'},
           {
             href: 'https://www.linkedin.com/in/jaypitkanen/',
             label: 'Connect',
@@ -125,11 +125,11 @@ const config = {
             items: [
               {
                 label: 'Case Studies',
-                to: '/docs/Introduction',
+                to: 'docs/Introduction',
               },
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'blog',
               },
 
             ],

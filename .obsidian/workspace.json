@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "47deab9cb34e04f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "3556146ec47cc2c3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "091cba1d192405c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/jetkvm_llm/AI Legacy Hardware Bridge.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI Legacy Hardware Bridge"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e7387a2b63b055c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "672c9384743928d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f7e4742f6ec0fc0f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "43e2741e1c6997ea",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "7caebfe018af0f80",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "eee59719a119a867",
+    "type": "split",
+    "children": [
+      {
+        "id": "6843bf2605eaae28",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c15bec2fb1896513",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/2021-08-26-welcome/docusaurus-plushie-banner.jpeg",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for docusaurus-plushie-banner"
+            }
+          },
+          {
+            "id": "21e07b46a4f776ef",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "blog/2021-08-26-welcome/docusaurus-plushie-banner.jpeg",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from docusaurus-plushie-banner"
+            }
+          },
+          {
+            "id": "32f3a6e2f1e59820",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d2f99b61e6d90fa9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "9b35bcfcb4abc301",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "blog/2021-08-26-welcome/docusaurus-plushie-banner.jpeg",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of docusaurus-plushie-banner"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "091cba1d192405c7",
+  "lastOpenFiles": [
+    "docs/case_study2/AI Safety Audit Engine.md",
+    "docs/jetkvm_llm/AI Legacy Hardware Bridge.md",
+    "Untitled.md",
+    "static/img/safety_inspector.png",
+    "docs/case_study2/Deployment Issues.md",
+    "safety_inspector.png",
+    "docs/case_study2/Future Strategy and Scale.md",
+    "docs/case_study5/AI Demographic Localizer.md",
+    "docs/jetkvm_llm/The Automation Loop.md",
+    "docs/jetkvm_llm/The Legacy Software Trap.md",
+    "docs/Introduction.md",
+    "docs/case_study2/Ingestion First Architecture.md",
+    "docs/case_study2/The Automation Loop.md",
+    "docs/case_study4/AI ERP Maintenance Matching Agent.md",
+    "docs/case_study3/AI Legislation Update Agent.md",
+    "docs/case_study5",
+    "docs/case_study4",
+    "docs/case_study3",
+    "docs/case_study2/Financials and Calculating ROI.md",
+    "static/img/Safetum System Topology.png",
+    "static/img/Safetum System Topology.pdf",
+    "docs/jetkvm_llm/Future Strategy and Scale.md",
+    "node_modules/@emnapi/runtime/dist/emnapi.iife.js",
+    "node_modules/@emnapi/runtime/dist/emnapi.esm-bundler.js",
+    "node_modules/@emnapi/runtime/dist/emnapi.cjs.min.js",
+    "node_modules/@emnapi/runtime/dist/emnapi.cjs.js",
+    "node_modules/@emnapi/runtime/dist",
+    "node_modules/@emnapi/runtime/LICENSE",
+    "node_modules/run-applescript/readme.md",
+    "node_modules/default-browser-id/readme.md",
+    "node_modules/bundle-name/readme.md",
+    "node_modules/default-browser/readme.md",
+    "node_modules/ansis/README.md",
+    "node_modules/reflect-metadata/README.md",
+    "node_modules/reflect-metadata/AUTHORS.md",
+    "node_modules/is-network-error/readme.md",
+    "node_modules/postcss-replace-overflow-wrap/README.md",
+    "node_modules/postcss-replace-overflow-wrap/CHANGELOG.md",
+    "node_modules/postcss-page-break/README.md",
+    "node_modules/detect-port-alt/logo.png",
+    "static/img/enterprise-soft.jpeg",
+    "static/img/title.jpeg",
+    "static/img/mercedes-epc.jpeg",
+    "static/img/future-scale.jpeg",
+    "docs/title.jpeg",
+    "docs/mercedes-epc.jpeg"
+  ]
+}

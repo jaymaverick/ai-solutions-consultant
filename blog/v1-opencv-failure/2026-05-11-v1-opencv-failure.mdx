@@ -1,0 +1,144 @@
+---
+slug: v1-opencv-failure
+title: "Version 1: OpenCV, How Hard Could it Be?"
+authors: jay
+tags:
+  - llm
+---
+My first idea was pretty simple.
+
+1. JetKVM forwards video to my browser.
+2. Python reads the screen and finds the buttons.
+3. Python shows content to LLM.
+4. Python tells JetKVM what to do based on LLM reasoning.
+
+Simple, elegant.
+
+OpenCV was the industry standard 6 years ago when I was actively coding Python, surely it would work fine here today, right? 
+
+*Surely.*
+
+{/* truncate */}
+
+I started writing Python code to process the image.
+
+```
+import cv2
+import numpy as np
+import pytesseract
+import pandas as pd
+
+def extract_epc_table(image_path):
+    # 1. Load image and convert to grayscale
+    img = cv2.imread(image_path)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+    # 2. Thresholding to get a binary image (black and white)
+    thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
+    
+    # 3. Isolate horizontal and vertical lines to detect the table grid
+    # Define a kernel length (adjust based on your image resolution)
+    kernel_len = np.array(img).shape[1] // 80
+    
+    # Horizontal lines
+    ver_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, kernel_len))
+    vertical_lines = cv2.erode(thresh, ver_kernel, iterations=3)
+    vertical_lines = cv2.dilate(vertical_lines, ver_kernel, iterations=3)
+    
+    # Vertical lines
+    hor_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (kernel_len, 1))
+    horizontal_lines = cv2.erode(thresh, hor_kernel, iterations=3)
+    horizontal_lines = cv2.dilate(horizontal_lines, hor_kernel, iterations=3)
+    
+    # Combine lines to form the complete grid mask
+    table_mask = cv2.addWeighted(vertical_lines, 0.5, horizontal_lines, 0.5, 0.0)
+    table_mask = cv2.threshold(table_mask, 0, 255, cv2.THRESH_BINARY)[1]
+    
+    # 4. Find contours of the table cells
+    contours, _ = cv2.findContours(table_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    
+    # Filter out very small or massive contours that aren't cells
+    bounding_boxes = [cv2.boundingRect(c) for c in contours]
+    
+    # Sort bounding boxes: Sort by Y coordinate primarily, then X coordinate
+    # This allows us to read rows from top-to-bottom, left-to-right
+    # Note: For complex tables, you might need a bucketing algorithm for row alignment.
+    bounding_boxes = sorted(bounding_boxes, key=lambda b: (b[1], b[0]))
+    
+    # 5. Extract Text from Each Cell
+    data = []
+    current_row = []
+    previous_y = -1
+    row_threshold = 10 # Pixels variance allowed to consider cells on the same row
+    
+    for x, y, w, h in bounding_boxes:
+        # Ignore bounds that are too tiny to contain text
+        if w < 40 or h < 20:
+            continue
+            
+        # Crop the cell from the original grayscale image
+        cell = gray[y:y+h, x:x+w]
+        
+        # Clean up cell image slightly for better OCR accuracy
+        cell = cv2.threshold(cell, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+        
+        # Run Tesseract OCR (using --psm 6: Assume a single uniform block of text)
+        text = pytesseract.image_to_string(cell, config='--psm 6').strip()
+        
+        # Group cells into rows based on their Y position
+        if previous_y == -1 or abs(y - previous_y) <= row_threshold:
+            current_row.append((x, text))
+        else:
+            # Sort current row by X position so columns are in order
+            current_row.sort(key=lambda item: item[0])
+            data.append([item[1] for item in current_row])
+            current_row = [(x, text)]
+        previous_y = y
+        
+    # Append the final row
+    if current_row:
+        current_row.sort(key=lambda item: item[0])
+        data.append([item[1] for item in current_row])
+        
+    # 6. Convert to Pandas DataFrame for cleaning
+    df = pd.DataFrame(data)
+    return df
+
+# --- Execution ---
+# df = extract_epc_table('mercedes_epc_screenshot.png')
+# print(df)
+```
+
+First, convert the image to grayscale and apply a heavy binary threshold. Next, isolate the vertical and horizontal grid lines using morphology kernels, blending them together to map out the entire table grid. Finally, find the cell contours, sort them top-to-bottom, and crop out every individual box so Tesseract OCR can scrape the text inside.
+
+***Even on paper, this project started sounding ridiculously messy.***
+
+In reality, my garbage code made it even worse.
+## Letting The Robot Do The Hard Work
+
+The Xentry software uses an ancient Windows UI. The buttons don't have clean, modern borders. They have weird gradients, tiny text, and non-standard layouts.
+
+My script was either missing the buttons entirely or highlighting random blank space. Adjusting the threshold numbers felt like tuning a radio from 1940. Fix it for one screen, and it breaks on the next.
+
+I was drowning in a sea of nested loops and pixel matrices. It was tedious, overcomplicated, and brittle.
+
+Then it hit me. 
+
+*Why am I trying to be a computer vision engineer?*
+
+I have a local Large Language Model sitting right there on my main desktop. Modern vision-language models don't just read text; they understand spatial layouts.
+
+Instead of writing fifty lines of terrible OpenCV code to crop and isolate bounding boxes, I can just feed the raw screenshot straight to the model.
+
+"Look at this image. Find the text that says 'Fuel System Diagnostics'. Give me its approximate X and Y coordinates on a 1920x1080 grid."
+
+The LLM doesn't care about noise reduction, gray scaling, or edge contours. It just looks at the screen, understands what it sees, and hands over the coordinates.
+
+Python becomes a simple mail carrier. It takes the image from the JetKVM, hands it to the LLM, gets the coordinates back, and tells the JetKVM where to click.
+
+No complicated math. No brittle thresholds. 
+
+Just pure, lazy efficiency.
+
+With version 0.1 dead on arrival, version 0.2 was starting to take shape.
+

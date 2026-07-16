@@ -1,0 +1,88 @@
+/* src/css/custom.css */
+
+:root {
+  /* An elegant, muted slate blue instead of bright neon blue */
+  --ifm-color-primary: #34495e;       
+  --ifm-color-primary-dark: #2e4154;
+  --ifm-color-primary-darker: #2c3e50;
+  --ifm-color-primary-darkest: #243342;
+  --ifm-color-primary-light: #3a526a;
+  --ifm-color-primary-lighter: #3d5770;
+  --ifm-color-primary-lightest: #476582;
+  
+  /* Soft background color adjustments */
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: #fafafa; /* Subtle off-white for the header */
+}
+
+.button--secondary:hover {
+  background-color: #003CB0 !important;
+  border-color: #3B82F6 !important;
+}
+
+/* Custom Portfolio Timeline Styles */
+.custom-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Vertical line track */
+.custom-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  width: 2px;
+  background: var(--ifm-color-emphasis-300);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 3.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Colored node indicator */
+.timeline-marker {
+  position: absolute;
+  left: calc(2rem - 6px);
+  top: 0.45rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  border: 3px solid var(--ifm-background-color);
+  transition: transform 0.2s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.3);
+}
+
+/* Card content block */
+.timeline-content {
+  background: var(--ifm-card-background-color);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  color: var(--ifm-font-color-base);
+}

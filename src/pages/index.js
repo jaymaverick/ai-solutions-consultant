@@ -79,7 +79,7 @@ export default function Home() {
             The result: operational delays measured in days become processes measured in minutes, with the compliance and security constraints your industry actually requires.            
           </p>
           <p style={{ fontSize: '1.2rem', color: 'var(--ifm-color-focus)', maxWidth: '800px', margin: '1.5rem auto 0 auto', lineHeight: '1.6', opacity: '0.9' }}>
-            AI isn't a panacea. <strong>It's a precision instrument .</strong>
+            AI isn't a panacea. <strong>It's a precision instrument.</strong>
           </p>
         </section>
 

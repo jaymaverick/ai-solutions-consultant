@@ -196,7 +196,7 @@ export default function Home() {
                 I'm a marketer, product designer, builder, and creator. My brain has never been very good at the whole "stick to the status quo, don't rock the boat, get a traditional career"-sort of thing. 
               </p>
               <p style={{ marginBottom: '1rem' }}>
-                When I wanted to study SEO and blogging, Aalto University didn't even recognize the concept of <strong> "content marketing." </strong> I eventually realized I wasn't built for a university degree, even if one existed to suit me. No, the marketing tech was out there, and I needed to find it.
+                When I wanted to study SEO and blogging, Aalto University didn't even recognize the concept of <strong> "content marketing." </strong> I eventually realized I wasn't built for a traditional Finnish career path. The marketing tech and innovators were <i>out there,</i> and I needed to find them.
               </p>
               <p style={{ marginBottom: '1rem' }}>
                 It took a few years, but eventually I found my people: <strong> Dreamers. Shapers. Singers. Makers. </strong>

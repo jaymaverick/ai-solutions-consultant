@@ -36,6 +36,17 @@ const sidebars = {
       ],
     },
     {
+      type: 'category',
+      label: 'LLM-SQL Query Tool',
+      link: {
+        type: 'doc',
+        id: 'sql-llm/SQL-LLM Translator',
+      },
+      items: [
+        'sql-llm/Code',
+      ],
+    },
+    {
       type: 'doc',
       id: 'case_study3/AI Legislation Update Agent',
       label: 'AI Legislation Update Agent',

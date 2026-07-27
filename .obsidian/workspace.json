@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/jetkvm_llm/AI Legacy Hardware Bridge.md",
+                "file": "docs/sql-llm/SQL-LLM Translator.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "AI Legacy Hardware Bridge"
+              "title": "SQL-LLM Translator"
             }
           }
         ]
@@ -185,25 +185,28 @@
   },
   "active": "091cba1d192405c7",
   "lastOpenFiles": [
+    "docs/sql-llm/Code.md",
+    "docs/case_study2/Ingestion First Architecture.md",
+    "docs/case_study2/Financials and Calculating ROI.md",
     "docs/case_study2/AI Safety Audit Engine.md",
+    "docs/case_study2/The Automation Loop.md",
+    "docs/case_study2/Future Strategy and Scale.md",
+    "docs/case_study2/Deployment Issues.md",
+    "docs/sql-llm/SQL-LLM Translator.md",
+    "docs/case_study3/AI Legislation Update Agent.md",
+    "docs/case_study4/AI ERP Maintenance Matching Agent.md",
+    "docs/case_study5/AI Demographic Localizer.md",
     "docs/jetkvm_llm/AI Legacy Hardware Bridge.md",
+    "docs/sql-llm",
     "Untitled.md",
     "static/img/safety_inspector.png",
-    "docs/case_study2/Deployment Issues.md",
     "safety_inspector.png",
-    "docs/case_study2/Future Strategy and Scale.md",
-    "docs/case_study5/AI Demographic Localizer.md",
     "docs/jetkvm_llm/The Automation Loop.md",
     "docs/jetkvm_llm/The Legacy Software Trap.md",
     "docs/Introduction.md",
-    "docs/case_study2/Ingestion First Architecture.md",
-    "docs/case_study2/The Automation Loop.md",
-    "docs/case_study4/AI ERP Maintenance Matching Agent.md",
-    "docs/case_study3/AI Legislation Update Agent.md",
     "docs/case_study5",
     "docs/case_study4",
     "docs/case_study3",
-    "docs/case_study2/Financials and Calculating ROI.md",
     "static/img/Safetum System Topology.png",
     "static/img/Safetum System Topology.pdf",
     "docs/jetkvm_llm/Future Strategy and Scale.md",
@@ -212,7 +215,6 @@
     "node_modules/@emnapi/runtime/dist/emnapi.cjs.min.js",
     "node_modules/@emnapi/runtime/dist/emnapi.cjs.js",
     "node_modules/@emnapi/runtime/dist",
-    "node_modules/@emnapi/runtime/LICENSE",
     "node_modules/run-applescript/readme.md",
     "node_modules/default-browser-id/readme.md",
     "node_modules/bundle-name/readme.md",
@@ -222,8 +224,6 @@
     "node_modules/reflect-metadata/AUTHORS.md",
     "node_modules/is-network-error/readme.md",
     "node_modules/postcss-replace-overflow-wrap/README.md",
-    "node_modules/postcss-replace-overflow-wrap/CHANGELOG.md",
-    "node_modules/postcss-page-break/README.md",
     "node_modules/detect-port-alt/logo.png",
     "static/img/enterprise-soft.jpeg",
     "static/img/title.jpeg",
